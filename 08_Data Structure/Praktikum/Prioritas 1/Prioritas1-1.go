@@ -2,34 +2,21 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 func main() {
-	var a, b int
-	fmt.Print("Masukkan banyaknya anggota slice pertama: ")
-	fmt.Scanln(&a)
-	slice1 := make([]string, a, a)
-	for i := 0; i <= a-1; i++ {
-		fmt.Printf("Masukkan anggota ke-%v slice pertama: ", i+1)
-		fmt.Scanln(&slice1[i])
-	}
-	fmt.Print("Masukkan banyaknya anggota slice kedua: ")
-	fmt.Scanln(&b)
-	slice2 := make([]string, b, b)
-	for i := 0; i <= b-1; i++ {
-		fmt.Printf("Masukkan anggota ke-%v slice pertama: ", i+1)
-		fmt.Scanln(&slice2[i])
-	}
-	fmt.Println(strings.Join(arrayMerge(slice1, slice2), ", "))
+	fmt.Println(arrayMerge([]string{"king", "devil jin", "akuma"}, []string{"eddie", "steve", "geese"}))
+	fmt.Println(arrayMerge([]string{"sergei", "jin"}, []string{"jin", "steve", "bryan"}))
+	fmt.Println(arrayMerge([]string{"alisa", "yoshimitsu"}, []string{"devil jin", "yoshimitsu", "alisa", "law"}))
+	fmt.Println(arrayMerge([]string{}, []string{"devil jin", "sergei"}))
+	fmt.Println(arrayMerge([]string{"hwoarang"}, []string{}))
+	fmt.Println(arrayMerge([]string{}, []string{}))
 }
 
 func arrayMerge(a, b []string) []string {
-	var c []string
+	c := make([]string, len(a))
 	var isSame bool
-	for _, slice := range a {
-		c = append(c, slice)
-	}
+	copy(c, a)
 	for _, slice2 := range b {
 		isSame = false
 		for _, slice := range a {

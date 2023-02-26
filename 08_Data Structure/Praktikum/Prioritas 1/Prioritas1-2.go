@@ -4,6 +4,8 @@ import "fmt"
 
 func main() {
 	fmt.Println(Mapping([]string{"asd", "qwe", "asd", "adi", "qwe", "qwe"}))
+	fmt.Println(Mapping([]string{"asd", "qwe", "asd"}))
+	fmt.Println(Mapping([]string{}))
 }
 
 func Mapping(slice []string) map[string]int {
