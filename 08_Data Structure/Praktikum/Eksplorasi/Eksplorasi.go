@@ -14,7 +14,7 @@ func main() {
 	for i := 0; i <= idx-1; i++ {
 		matrix[i] = make([]int, idx)
 		for j := 0; j <= idx-1; j++ {
-			fmt.Printf("Masukkan nilai untuk baris ke-%v dan kolom ke-%v: ", i, j)
+			fmt.Printf("Masukkan nilai untuk baris ke-%v dan kolom ke-%v: ", i+1, j+1)
 			fmt.Scanln(&matrix[i][j])
 		}
 	}

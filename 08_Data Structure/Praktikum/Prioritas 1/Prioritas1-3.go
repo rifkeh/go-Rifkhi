@@ -6,10 +6,15 @@ import (
 )
 
 func main() {
-	var angka string
-	fmt.Print("Masukkan angka yang akan di cek muncul sekali nya: ")
-	fmt.Scanln(&angka)
-	fmt.Println(MunculSekali(angka))
+	// var angka string
+	// fmt.Print("Masukkan angka yang akan di cek muncul sekali nya: ")
+	// fmt.Scanln(&angka)
+	// fmt.Println(MunculSekali(angka))
+	fmt.Println(MunculSekali("1234123"))
+	fmt.Println(MunculSekali("76523752"))
+	fmt.Println(MunculSekali("12345"))
+	fmt.Println(MunculSekali("1122334455"))
+	fmt.Println(MunculSekali("0872504"))
 }
 
 func MunculSekali(angka string) []int {
