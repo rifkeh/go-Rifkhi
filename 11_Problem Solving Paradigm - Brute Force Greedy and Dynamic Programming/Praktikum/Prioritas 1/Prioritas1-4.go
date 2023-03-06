@@ -1,14 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
-func solveXYZ(A, B, C int) (r1, r2, r3 int) {
+func solveXYZ(A, B, C int) (r1, r2, r3 string) {
 	isFound := false
 	for x := -100; x <= 100; x++ {
 		for y := -100; y <= 100; y++ {
 			z := A - x - y
 			if x*y*z == B && x*x+y*y+z*z == C {
-				r1, r2, r3 = x, y, z
+				r1, r2, r3 = strconv.Itoa(x), strconv.Itoa(y), strconv.Itoa(z)
 				isFound = true
 			}
 			if isFound == true {
@@ -20,8 +23,7 @@ func solveXYZ(A, B, C int) (r1, r2, r3 int) {
 		}
 	}
 	if isFound == false {
-		fmt.Println("tidak ditemukan")
-		return
+		return "tidak ditemukan", "", ""
 	}
 	return r1, r2, r3
 }
