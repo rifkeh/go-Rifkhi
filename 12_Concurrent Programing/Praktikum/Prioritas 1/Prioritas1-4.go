@@ -17,13 +17,6 @@ func (n *number) factorialNumber(num int, w *sync.WaitGroup) {
 	n.mu.Unlock()
 }
 
-func (n *number) increaseNumber(num int, w *sync.WaitGroup) {
-	n.mu.Lock()
-	n.value += num
-	w.Done()
-	n.mu.Unlock()
-}
-
 func (n *number) getNumber() int {
 	return n.value
 }
@@ -33,9 +26,8 @@ func main() {
 	angka.value = 1
 	var wg sync.WaitGroup
 	for i := 2; i <= 5; i++ {
-		wg.Add(2)
+		wg.Add(1)
 		go angka.factorialNumber(i, &wg)
-		go angka.increaseNumber(i, &wg)
 	}
 
 	wg.Wait()
