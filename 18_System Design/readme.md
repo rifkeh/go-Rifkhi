@@ -1,0 +1,2 @@
+# System Design
+System Desgin adalah sebuah rancangan awal dalam pembuatan sebuah aplikasi maupun web. Didalamnya dilibatkan beberapa pertimbangan seperti kinerja, keamanan, keandalan, skalabilitas, dan penggunaan sumber daya supaya efisien. Didalam pembuatan system desgin, terdapat beberapa teknik dan metode seperti analisis use case, diagram aliran data, diagram kelasm dan diagram sekuen.
