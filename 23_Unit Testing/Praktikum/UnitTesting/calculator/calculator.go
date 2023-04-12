@@ -12,6 +12,9 @@ func Multiplication(a, b int) int {
 	return a * b
 }
 
-func Division(a, b int) int {
+func Division(a, b int) interface{} {
+	if b == 0 {
+		return "can't divide by 0"
+	}
 	return a / b
 }

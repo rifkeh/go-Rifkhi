@@ -16,7 +16,7 @@ func InitDB() {
 		"DB_Username": "root",
 		"DB_Password": "rifkhi",
 		"DB_Port":     "3306",
-		"DB_Host":     "docker.for.linux.localhost",
+		"DB_Host":     "localhost",
 		"DB_Name":     "shop",
 	}
 	connectionString := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local", config["DB_Username"], config["DB_Password"], config["DB_Host"], config["DB_Port"], config["DB_Name"])
